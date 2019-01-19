@@ -94,6 +94,7 @@ def main():
     dataset = tf.data.Dataset.from_generator(gen, 
                                 (tf.int32, tf.int32), 
                                 (tf.TensorShape([BATCH_SIZE]), tf.TensorShape([BATCH_SIZE, 1])))
+    print("---------------------------------------------------")
     word2vec(dataset)
 
 if __name__ == '__main__':
