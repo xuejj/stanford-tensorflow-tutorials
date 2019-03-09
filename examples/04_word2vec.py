@@ -91,6 +91,7 @@ def gen():
                                         BATCH_SIZE, SKIP_WINDOW, VISUAL_FLD)
 
 def main():
+    print("begin")
     dataset = tf.data.Dataset.from_generator(gen, 
                                 (tf.int32, tf.int32), 
                                 (tf.TensorShape([BATCH_SIZE]), tf.TensorShape([BATCH_SIZE, 1])))

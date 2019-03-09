@@ -70,7 +70,9 @@ def batch_gen(download_url, expected_byte, vocab_size, batch_size,
                 skip_window, visual_fld):
     local_dest = 'data/text8.zip'
     #utils.download_one_file(download_url, local_dest, expected_byte)
+    print("------")
     words = read_data(local_dest)
+    print("done read")
     dictionary, _ = build_vocab(words, vocab_size, visual_fld)
     index_words = convert_words_to_index(words, dictionary)
     del words           # to save memory
